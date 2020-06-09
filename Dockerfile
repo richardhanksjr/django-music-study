@@ -13,7 +13,7 @@ WORKDIR /code
 
 # Install dependencies
 COPY Pipfile Pipfile.lock /code/
-RUN pip install pipenv && pipenv install --system  && python manage.py collectstatic --noinput
+RUN pip install pipenv && pipenv install --system  && python /code/manage.py collectstatic --noinput
 
 # Copy project
 COPY . /code/
